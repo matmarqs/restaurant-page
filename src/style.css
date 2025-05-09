@@ -1,3 +1,7 @@
+:root {
+  line-height: 1.5;
+}
+
 *,
 *::before,
 *::after {
@@ -16,9 +20,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 24px;
+  padding: 24px 48px;
   background-color: chocolate;
   color: lavenderblush;
+  border-bottom: 4px solid khaki;
 }
 
 .header-link {
@@ -29,6 +34,9 @@ body {
   font-weight: 700;
   font-size: 20px;
   cursor: pointer;
+  text-shadow: 1px 1px 2px black;
+  font-style: italic;
+  box-shadow: 0px 0px 4px black;
 }
 
 .header-logo {
@@ -41,6 +49,7 @@ body {
   font-weight: 900;
   font-size: 36px;
   font-style: italic;
+  text-shadow: 1px 1px 2px black;
 }
 
 .logo {
@@ -48,17 +57,24 @@ body {
   width: 120px;
   border-radius: 16px;
   border: 4px solid orange;
+  box-shadow: 0px 0px 10px black;
 }
 
 .header-nav {
   display: flex;
-  gap: 16px;
+  gap: 24px;
 }
 
 .footer {
   display: flex;
-  background-color: yellow;
+  background-color: peru;
   padding: 16px 0px;
+  color: lavenderblush;
+  font-family: monospace;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 700;
+  text-shadow: 1px 1px 2px black;
 }
 
 .footer-text {
@@ -66,41 +82,60 @@ body {
 }
 
 #content {
-  padding: 32px;
+  padding: 48px;
   background-color: darkred;
   flex: 1;
   color: lavenderblush;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
+  gap: 32px;
 }
 
 .card {
-  width: 40%;
+  width: 600px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 16px;
+  padding: 16px 64px;
   border: 3px solid khaki;
   background-color: peru;
   gap: 16px;
   border-radius: 16px;
+  box-shadow: 0px 0px 4px black;
 }
 
 .card-header {
   font-weight: 700;
   font-size: 24px;
   color: maroon;
+  align-self: baseline;
+  font-style: italic;
+  text-shadow: 1px 1px 2px lavenderblush;
 }
 
 .card-text {
   font-size: 16px;
   font-weight: 500;
+  font-family: monospace;
+  text-shadow: 1px 1px 2px black;
 }
 
 .citation {
   color: lavenderblush;
   font-weight: 700;
   font-size: 18px;
+  font-style: italic;
+  text-shadow: 1px 1px 2px black;
+}
+
+.author {
+  color: maroon;
+  font-style: normal;
+  align-self: end;
+  text-shadow: 1px 1px 2px lavenderblush;
+}
+
+.author::before {
+  content: '~';
 }

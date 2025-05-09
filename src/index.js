@@ -5,19 +5,12 @@ import Citation from "./components/citation.js"
 const main = (function() {
   const content = document.querySelector("#content");
 
-  const home = document.querySelector("#home")
-  home.addEventListener("click", () => { loadHome(); });
-
-  const menu = document.querySelector("#menu")
-  menu.addEventListener("click", () => { loadMenu(); });
-
-  const contact = document.querySelector("#contact")
-  contact.addEventListener("click", () => { loadContact(); });
+  document.querySelector("#home").addEventListener("click", loadHome);
+  document.querySelector("#menu").addEventListener("click", loadMenu);
+  document.querySelector("#contact").addEventListener("click", loadContact);
 
   function clearContent() {
-    while (content.firstChild) {
-      content.removeChild(content.firstChild);
-    }
+    content.replaceChildren(); // Modern/faster method
   }
 
   function loadHome() {
@@ -76,7 +69,7 @@ const main = (function() {
     content.appendChild(location);
   }
 
-  return { loadHome };
+  return { loadHome, loadMenu, loadContact };
 })();
 
 main.loadHome();
